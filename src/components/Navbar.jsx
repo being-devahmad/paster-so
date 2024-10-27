@@ -1,5 +1,6 @@
 import { ChevronsUpDown, Gem, Headphones } from "lucide-react"
 import { useState } from 'react'
+import { Link } from "react-router-dom"
 
 
 export const Navbar = () => {
@@ -18,7 +19,9 @@ export const Navbar = () => {
 
                         <button className="inline-flex gap-2 justify-center items-center">
                             <img src="./profile.jpeg" className="rounded-sm" width={20} height={20} alt="" />
-                            <span >Sign In</span>
+                            <span>
+                                <Link to={'/auth'}>Sign In</Link>
+                            </span>
                             <ChevronsUpDown className="w-3 h-3" />
                         </button>
                     </div>
@@ -33,7 +36,7 @@ export const Navbar = () => {
                             <code className="text-xs">
                                 <span>Get Ad-Free</span>
                             </code>
-                            
+
                             {isHoveringAdFree && (
                                 <div className="absolute top-full left-2 mt-2 z-10">
                                     <div className="flex justify-center items-center gap-2 border border-[#3c3d4d] px-2 py-1 rounded-md 
